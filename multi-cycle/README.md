@@ -82,16 +82,3 @@ The multicycle processor requires:
 - four cycles for sw, addi, and R-type instructions, 
 - and five cycles for lw instructions.
 
-The **CPI** depends on the relative likelihood that each instruction is used. The SPECINT2000 benchmark consists of approximately 25% loads, 10% stores, 11% branches, 2% jumps, and 52% R-type instructions.
-
-<p align='center'> Average CPI = (0.11+0.02) (3) +(0.52+0.10) (4) + (0.25) (5) =4.12. </p>
-
-This is better than the worst-case CPI of 5, which would be required if all instructions took the same time. (Single Cycle Microarchitecture)
-
-However, when calculating the execution time using the same Tc and same 100 billion instruction program as in the single cycle performance analysis we found the following,
-
-<p align='center'> Execution time is= (100×109 instructions) (4.12 cycles/instruction) (325×10−12 s/cycle) =133.9 seconds.</p>
-
-The single-cycle processor had a total execution time of 92.5 seconds. Thus, we conclude that multi-cycle performance is worse than the single cycle processor.
-
----
